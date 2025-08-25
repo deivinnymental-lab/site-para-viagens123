@@ -1,0 +1,366 @@
+/* ===============================
+    RESET E BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* ===============================
+    FUNDO ANIMADO
+================================ */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+}
+
+#canvas-bg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ===============================
+    NAVBAR
+================================ */
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6b6b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: #ff6b6b;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ===============================
+    HERO
+================================ */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 50px 100px 50px;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #ff3c3c;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn-primary {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.hero-content .btn-primary:hover {
+  transform: scale(1.1);
+  background-color: #ff3c3c;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 600px;
+  text-align: center;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===============================
+    SEÇÕES DE DESTINOS
+================================ */
+.destinos-section {
+  padding: 100px 50px;
+  background: linear-gradient(to bottom, #f0f8ff, #e0f7fa);
+}
+
+.destinos-section h2 {
+  font-size: 2.5rem;
+  color: #ff6b6b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.destinos-section p {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+    FILTROS
+================================ */
+.filters {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  background-color: #fff;
+  color: #ff6b6b;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #ff6b6b;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* ===============================
+    CARROSSEL
+================================ */
+.carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 20px;
+}
+
+.carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #ff6b6b;
+  border-radius: 10px;
+}
+
+.carousel-item {
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item h3 {
+  font-size: 1.2rem;
+  color: #ff3c3c;
+  margin: 15px;
+}
+
+.carousel-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 15px 15px 15px;
+}
+
+.carousel-item .btn-travel {
+  display: block;
+  text-align: center;
+  margin: 0 15px 15px 15px;
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.carousel-item .btn-travel:hover {
+  transform: scale(1.1);
+  background-color: #ff3c3c;
+}
+
+.carousel-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ===============================
+    FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 50px;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* ===============================
+    ANIMAÇÕES
+================================ */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===============================
+    RESPONSIVIDADE
+================================ */
+@media screen and (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 150px 30px 100px 30px;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .carousel-item {
+    min-width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .carousel-item {
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .carousel-item {
+    min-width: 180px;
+  }
+
+  .carousel-item img {
+    height: 150px;
+  }
+}

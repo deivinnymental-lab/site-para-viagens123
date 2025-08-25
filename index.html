@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viagens dos Sonhos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- FUNDO ANIMADO -->
+  <div id="background">
+    <canvas id="canvas-bg"></canvas>
+  </div>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Viagens dos Sonhos</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#destinos-principais">Destinos Populares</a></li>
+        <li><a href="#destinos-surpresa">Destinos Surpresa</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- SEÇÃO HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Explore o Mundo com Estilo!</h1>
+      <p>Descubra destinos incríveis, populares e secretos, com links diretos para reservar sua viagem.</p>
+      <a href="#destinos-principais" class="btn-primary">Ver Destinos</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Destino tropical">
+    </div>
+  </section>
+
+  <!-- SEÇÃO DESTINOS PRINCIPAIS -->
+  <section id="destinos-principais" class="destinos-section">
+    <h2>Destinos Populares</h2>
+    <div class="filters">
+      <button class="filter-btn" data-continent="todos">Todos</button>
+      <button class="filter-btn" data-continent="america">América</button>
+      <button class="filter-btn" data-continent="europa">Europa</button>
+      <button class="filter-btn" data-continent="asia">Ásia</button>
+      <button class="filter-btn" data-continent="africa">África</button>
+      <button class="filter-btn" data-continent="oceania">Oceania</button>
+    </div>
+    <div class="carousel destinos-carousel">
+      <!-- 12 destinos populares -->
+      <div class="carousel-item" data-continent="europa">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Paris, França">
+        <h3>Paris, França</h3>
+        <p>A cidade luz com suas famosas atrações e gastronomia incrível.</p>
+        <a href="https://www.booking.com/city/fr/paris.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="america">
+        <img src="https://images.unsplash.com/photo-1549921296-3d57f5f9631e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Nova York, EUA">
+        <h3>Nova York, EUA</h3>
+        <p>A cidade que nunca dorme, cheia de cultura, arte e vida noturna.</p>
+        <a href="https://www.decolar.com/viagens/nova-york" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="asia">
+        <img src="https://images.unsplash.com/photo-1549692520-acc6669e2f0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Tóquio, Japão">
+        <h3>Tóquio, Japão</h3>
+        <p>Um mix de tradição e modernidade, com tecnologia e cultura incríveis.</p>
+        <a href="https://www.expedia.com/Tokyo-Hotels.d179902.Travel-Guide-Hotels" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="oceania">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Sydney, Austrália">
+        <h3>Sydney, Austrália</h3>
+        <p>Explore praias, o icônico Opera House e paisagens naturais únicas.</p>
+        <a href="https://www.booking.com/city/au/sydney.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="africa">
+        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Cidade do Cabo, África do Sul">
+        <h3>Cidade do Cabo, África do Sul</h3>
+        <p>Montanhas, praias e vinícolas em um destino fascinante.</p>
+        <a href="https://www.airbnb.com/s/Cape-Town--South-Africa/homes" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="america">
+        <img src="https://images.unsplash.com/photo-1528252911633-8ef62d8f0b3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Rio de Janeiro, Brasil">
+        <h3>Rio de Janeiro, Brasil</h3>
+        <p>Praias deslumbrantes, cultura vibrante e paisagens icônicas.</p>
+        <a href="https://www.decolar.com/viagens/rio-de-janeiro" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <!-- 6 destinos adicionais -->
+      <div class="carousel-item" data-continent="america">
+        <img src="https://images.unsplash.com/photo-1559589689-57773c35dacc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Cancún, México">
+        <h3>Cancún, México</h3>
+        <p>Praias paradisíacas e resorts luxuosos.</p>
+        <a href="https://www.booking.com/city/mx/cancun.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="europa">
+        <img src="https://images.unsplash.com/photo-1503437313881-503a91226419?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Roma, Itália">
+        <h3>Roma, Itália</h3>
+        <p>História milenar e arquitetura impressionante.</p>
+        <a href="https://www.booking.com/city/it/rome.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="asia">
+        <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Bangkok, Tailândia">
+        <h3>Bangkok, Tailândia</h3>
+        <p>Cultura vibrante, templos e culinária incrível.</p>
+        <a href="https://www.booking.com/city/th/bangkok.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="oceania">
+        <img src="https://images.unsplash.com/photo-1502919012569-0c9d8f4d1c60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Queenstown, Nova Zelândia">
+        <h3>Queenstown, Nova Zelândia</h3>
+        <p>Natureza e aventuras radicais em um cenário espetacular.</p>
+        <a href="https://www.booking.com/city/nz/queenstown.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="africa">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Marrakech, Marrocos">
+        <h3>Marrakech, Marrocos</h3>
+        <p>Mercados coloridos, cultura e palácios exóticos.</p>
+        <a href="https://www.booking.com/city/ma/marrakech.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="america">
+        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Vancouver, Canadá">
+        <h3>Vancouver, Canadá</h3>
+        <p>Paisagens naturais deslumbrantes e vida urbana moderna.</p>
+        <a href="https://www.booking.com/city/ca/vancouver.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DESTINOS SURPRESA -->
+  <section id="destinos-surpresa" class="destinos-section">
+    <h2>Destinos Surpresa</h2>
+    <p>Descubra lugares pouco conhecidos, mas que vão te encantar!</p>
+    <div class="carousel destinos-carousel">
+      <div class="carousel-item" data-continent="america">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Huacachina, Peru">
+        <h3>Huacachina, Peru</h3>
+        <p>Oásis no deserto com dunas perfeitas para sandboard.</p>
+        <a href="https://www.booking.com/city/pe/huacachina.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="europa">
+        <img src="https://images.unsplash.com/photo-1549887534-9a7c0f7e8ed6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Giethoorn, Holanda">
+        <h3>Giethoorn, Holanda</h3>
+        <p>Pequena vila sem ruas, navegável apenas por canais.</p>
+        <a href="https://www.booking.com/city/nl/giethoorn.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="asia">
+        <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Luang Prabang, Laos">
+        <h3>Luang Prabang, Laos</h3>
+        <p>Cidade histórica e templos encantadores.</p>
+        <a href="https://www.booking.com/city/la/luang-prabang.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="africa">
+        <img src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Zanzibar, Tanzânia">
+        <h3>Zanzibar, Tanzânia</h3>
+        <p>Praias paradisíacas e cultura exótica.</p>
+        <a href="https://www.booking.com/city/tz/zanzibar.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+      <div class="carousel-item" data-continent="oceania">
+        <img src="https://images.unsplash.com/photo-1520962919403-3f8f574c4515?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Palawan, Filipinas">
+        <h3>Palawan, Filipinas</h3>
+        <p>Ilhas tropicais, água cristalina e natureza exuberante.</p>
+        <a href="https://www.booking.com/city/ph/palawan.pt-br.html" target="_blank" class="btn-travel">Viajar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Viagens dos Sonhos. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
